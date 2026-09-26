@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers static site (no build step)
+  "name": "personalwebsite",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./",
+    // Serve 404.html for unknown paths instead of a blank 404
+    "not_found_handling": "404-page"
+  }
+}

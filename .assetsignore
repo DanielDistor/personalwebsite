@@ -1,0 +1,7 @@
+# Repo files that shouldn't be served on the website
+.git
+.gitignore
+.assetsignore
+README.md
+wrangler.jsonc
+Headshot copy.jpg
