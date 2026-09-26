@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects · Daniel Distor</title>
+  <meta name="description" content="Projects by Daniel Distor — data products, apps, and systems engineering work.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects · Daniel Distor">
+  <meta property="og:description" content="Data products, apps, and systems work by Daniel Distor, plus the physical things he designs and 3D prints.">
+  <meta property="og:url" content="https://danieldistor.com/projects">
+  <meta property="og:image" content="https://danieldistor.com/assets/portrait.jpg">
+  <meta property="og:image:alt" content="Daniel Distor">
+  <meta property="og:site_name" content="Daniel Distor">
+  <link rel="canonical" href="https://danieldistor.com/projects">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#ececec">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😉</text></svg>">
+  <link rel="stylesheet" href="styles.css?v=27">
+</head>
+<body>
+  <main class="frame">
+
+    <section class="card projects-head">
+      <a class="back" href="index.html"><span aria-hidden="true">←</span> Home</a>
+      <h2 class="label">Projects</h2>
+      <h1 class="about-title">Things I’ve built</h1>
+      <p class="proj-intro">Data products, apps, and systems work, plus the physical things I design and 3D print.</p>
+      <div class="tabs" role="tablist" aria-label="Project type">
+        <button class="tab" role="tab" id="tab-digital" aria-controls="panel-digital" aria-selected="true">Digital</button>
+        <button class="tab" role="tab" id="tab-physical" aria-controls="panel-physical" aria-selected="false" tabindex="-1">Physical</button>
+      </div>
+    </section>
+
+    <section class="card" id="panel-digital" role="tabpanel" aria-labelledby="tab-digital">
+      <div class="proj-list">
+      <article class="proj" id="cargopulse">
+        <div class="thumb thumb-cargo"><span>CargoPulse</span></div>
+        <div class="proj-body">
+          <span class="mini-label">Data Product · Live</span>
+          <h2 class="proj-title">CargoPulse</h2>
+          <p class="proj-desc">A real-time supply chain risk intelligence platform that pulls live, free data sources into one view of where shipments are likely to get stuck.</p>
+          <ul class="proj-points">
+              <li>Live vessel map near 50 major ports, streamed over WebSocket from AIS data</li>
+              <li>Congestion score (0–100) for the top 30 ports, refreshed every 15 minutes</li>
+              <li>Rule-based delay estimate for any origin → destination route</li>
+              <li>Country-level supplier risk heatmap combining congestion, marine weather, and the Baltic Dry Index</li>
+          </ul>
+          <ul class="pills"><li class="pill">Python</li><li class="pill">Streamlit</li><li class="pill">Plotly</li><li class="pill">pandas</li><li class="pill">SQLite</li><li class="pill">WebSockets</li></ul>
+            <div class="proj-links"><a class="proj-link" href="https://cargopulse-app.streamlit.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>Live app</a><a class="proj-link" href="https://github.com/DanielDistor/cargopulse-supply-chain-platform" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>GitHub</a></div>
+        </div>
+      </article>
+
+      <article class="proj" id="deposit-pricing">
+        <div class="thumb thumb-bank"><span>Deposit Pricing</span></div>
+        <div class="proj-body">
+          <span class="mini-label">Analytics · Live</span>
+          <h2 class="proj-title">Deposit Pricing Analytics</h2>
+          <p class="proj-desc">Where should a client deposit their money right now to get the most growth? This pipeline tracks how major U.S. banks respond to Federal Reserve rate changes and builds the case.</p>
+          <ul class="proj-points">
+              <li>Pulls Fed funds and Treasury rates from the FRED API and bank APYs scraped from Bankrate</li>
+              <li>Loads raw data into Snowflake and models it with dbt into a fact table with bank, product, and date dimensions</li>
+              <li>Refreshes automatically every week with GitHub Actions</li>
+              <li>Presents the answer in a public Streamlit dashboard</li>
+          </ul>
+          <ul class="pills"><li class="pill">SQL</li><li class="pill">Python</li><li class="pill">Snowflake</li><li class="pill">dbt</li><li class="pill">GitHub Actions</li><li class="pill">Streamlit</li></ul>
+            <div class="proj-links"><a class="proj-link" href="https://deposit-pricing-analytics-banking.streamlit.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>Live dashboard</a><a class="proj-link" href="https://github.com/DanielDistor/deposit-pricing-analytics-banking" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>GitHub</a></div>
+        </div>
+      </article>
+
+      <article class="proj" id="eduperks">
+        <div class="thumb thumb-edu"><img src="assets/eduperks.png" alt=""><span>EduPerks</span></div>
+        <div class="proj-body">
+          <span class="mini-label">Mobile App · iOS &amp; Android</span>
+          <h2 class="proj-title">EduPerks</h2>
+          <p class="proj-desc">Students miss out on perks their school already pays for. EduPerks finds them: enter your school email and it shows the benefits available to you.</p>
+          <ul class="proj-points">
+              <li>Detects your school from its email domain</li>
+              <li>Checks a Supabase cache first, and only scrapes public school pages with Firecrawl when needed</li>
+              <li>Labels each benefit as Confirmed, Likely, or Needs Verification</li>
+              <li>Refreshes benefit data daily with a scheduled job</li>
+          </ul>
+          <ul class="pills"><li class="pill">Flutter</li><li class="pill">Dart</li><li class="pill">Supabase</li><li class="pill">TypeScript</li><li class="pill">Firecrawl</li></ul>
+        </div>
+      </article>
+
+      <article class="proj" id="llm-compass">
+        <div class="thumb thumb-llm"><span>LLM Compass</span></div>
+        <div class="proj-body">
+          <span class="mini-label">Systems Engineering · In progress</span>
+          <h2 class="proj-title">LLM Compass</h2>
+          <p class="proj-desc">A team project for Cornell’s SYSEN 5151 (Team Cascadilla). Choosing a language model for an app is usually a day of reading leaderboards, with the reasoning lost in a chat thread. LLM Compass treats it as a trade study instead.</p>
+          <ul class="proj-points">
+              <li>A tech lead enters the app’s requirements and reviews the criteria the tool proposes</li>
+              <li>They weight what the team actually cares about: accuracy, cost, latency, context, data rules</li>
+              <li>The tool returns a ranked shortlist with its reasoning attached</li>
+              <li>The decision record can be exported, then re-run when new models ship</li>
+          </ul>
+          <ul class="pills"><li class="pill">Systems engineering</li><li class="pill">Trade studies</li><li class="pill">Python</li><li class="pill">LLMs</li></ul>
+            <div class="proj-links"><a class="proj-link" href="https://github.com/sysen5151-fall2026/llmcompass" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>GitHub</a></div>
+        </div>
+      </article>
+
+      <article class="proj" id="floor-planner">
+        <div class="thumb thumb-hack"><span>AI Floor Planner</span></div>
+        <div class="proj-body">
+          <span class="mini-label">Hackathon · Cornell</span>
+          <h2 class="proj-title">Dell x Nvidia Hackathon</h2>
+          <p class="proj-desc">An AI-powered floor-planning tool that places furniture into real rooms under hard safety-rule constraints and matches each item to a product you can actually buy, built in 12 hours.</p>
+          <ul class="proj-points">
+              <li>Owned the user flow and UI design</li>
+              <li>Mapped the full journey: floor-plan upload → AI-generated layout → exportable shopping list</li>
+              <li>Built with an LLM tool-calling agent loop behind a 3D room view</li>
+          </ul>
+          <ul class="pills"><li class="pill">React</li><li class="pill">TypeScript</li><li class="pill">Three.js</li><li class="pill">Node.js</li><li class="pill">LLM agents</li></ul>
+        </div>
+      </article>
+
+      <article class="proj" id="ev-battery">
+        <div class="thumb thumb-ev"><span>EV Battery Recycling</span></div>
+        <div class="proj-body">
+          <span class="mini-label">Research · In progress</span>
+          <h2 class="proj-title">EV Battery Recycling Risk Assessment</h2>
+          <p class="proj-desc">Contributing to a multi-criteria decision analysis framework for choosing EV battery recycling pathways.</p>
+          <ul class="proj-points">
+              <li>Combines MCDA and FMEA to compare pathways</li>
+              <li>Applies systems thinking across safety, environmental, and economic dimensions</li>
+          </ul>
+          <ul class="pills"><li class="pill">Systems thinking</li><li class="pill">MCDA</li><li class="pill">FMEA</li></ul>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="card" id="panel-physical" role="tabpanel" aria-labelledby="tab-physical" hidden>
+      <p class="panel-intro">Things I design and 3D print: prototypes, fixes, and experiments. Each one starts with a problem and goes through a few versions.</p>
+      <!-- Placeholder tiles: replace each with a real print (photo + one-liner + versions/material) -->
+      <div class="print-grid">
+        <article class="print print-empty">
+          <div class="print-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
+          <span class="mini-label">Example · Coming soon</span>
+          <h3>Your first print</h3>
+          <p>A photo, the problem it solves, and how many versions it took.</p>
+          <span class="print-meta">3 versions · PLA</span>
+        </article>
+        <article class="print print-empty">
+          <div class="print-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
+          <span class="mini-label">Example · Coming soon</span>
+          <h3>A functional fix</h3>
+          <p>Something around the house or desk that works better because you designed it.</p>
+          <span class="print-meta">2 versions · PETG</span>
+        </article>
+        <article class="print print-empty">
+          <div class="print-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg></div>
+          <span class="mini-label">Example · Coming soon</span>
+          <h3>A prototype</h3>
+          <p>An early physical version of an idea, printed to test before building the real thing.</p>
+          <span class="print-meta">5 versions · PLA</span>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating dock -->
+  <nav class="dock" aria-label="Primary">
+    <a href="index.html#home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3.5 11L12 4l8.5 7M5.5 9.5V20h4.5v-6h4v6h4.5V9.5"/></svg>Home</a>
+    <a href="projects.html" class="active" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 6.5A1.5 1.5 0 014.5 5h4.2l2 2h8.8A1.5 1.5 0 0121 8.5v10a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 18.5zM3 10h18"/></svg>Projects</a>
+    <a href="about.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3.2" fill="currentColor"/><path d="M6.3 18.4c1.3-2.3 3.4-3.4 5.7-3.4s4.4 1.1 5.7 3.4" fill="currentColor"/></svg>About</a>
+    <a href="index.html#contact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3.5 10L12 4l8.5 6v9.5h-17zM3.5 10l8.5 6 8.5-6M3.5 19.5l6.5-5M20.5 19.5l-6.5-5"/></svg>Contact</a>
+  </nav>
+  <script src="script.js?v=27"></script>
+</body>
+</html>

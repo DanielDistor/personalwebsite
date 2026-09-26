@@ -1,0 +1,6 @@
+.DS_Store
+.playwright-mcp/
+.env
+
+# Local originals not used by the site (the site uses assets/headshot.jpg and assets/portrait.jpg)
+Headshot copy.jpg
