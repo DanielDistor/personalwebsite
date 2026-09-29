@@ -2,5 +2,5 @@
 .playwright-mcp/
 .env
 
-# Local originals not used by the site (the site uses assets/headshot.jpg and assets/portrait.jpg)
+# Local originals not used by the site (the site uses assets/headshot-2.jpg and assets/portrait-2.jpg)
 Headshot copy.jpg
