@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=37">
+  <link rel="stylesheet" href="styles.css?v=38">
 </head>
 <body>
   <main class="frame">
@@ -55,20 +55,18 @@
         </div>
       </article>
 
-      <article class="proj" id="cargopulse">
-        <div class="thumb thumb-shot"><img src="assets/cargopulse-ports.jpg" alt="CargoPulse Port Congestion Rankings: congestion scores for 50 world ports, with Rotterdam critical at 100 and Piraeus high at 73" width="1280" height="811" loading="lazy"></div>
+      <article class="proj" id="floor-planner">
+        <div class="thumb thumb-hack"><span>AI Floor Planner</span></div>
         <div class="proj-body">
-          <span class="mini-label">Data Product · Live</span>
-          <h2 class="proj-title">CargoPulse</h2>
-          <p class="proj-desc">A real-time supply chain risk intelligence platform that pulls live, free data sources into one view of where shipments are likely to get stuck.</p>
+          <span class="mini-label">Hackathon · Cornell</span>
+          <h2 class="proj-title">Dell x Nvidia Hackathon</h2>
+          <p class="proj-desc">An AI-powered floor-planning tool that places furniture into real rooms under hard safety-rule constraints and matches each item to a product you can actually buy, built in 12 hours.</p>
           <ul class="proj-points">
-              <li>Live vessel map near 50 major ports, streamed over WebSocket from AIS data</li>
-              <li>Congestion score (0–100) for the top 30 ports, refreshed every 15 minutes</li>
-              <li>Rule-based delay estimate for any origin → destination route</li>
-              <li>Country-level supplier risk heatmap combining congestion, marine weather, and the Baltic Dry Index</li>
+              <li>Owned the user flow and UI design</li>
+              <li>Mapped the full journey: floor-plan upload → AI-generated layout → exportable shopping list</li>
+              <li>Built with an LLM tool-calling agent loop behind a 3D room view</li>
           </ul>
-          <ul class="pills"><li class="pill">Python</li><li class="pill">Streamlit</li><li class="pill">Plotly</li><li class="pill">pandas</li><li class="pill">SQLite</li><li class="pill">WebSockets</li></ul>
-            <div class="proj-links"><a class="proj-link" href="https://cargopulse-app.streamlit.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>Live app</a><a class="proj-link" href="https://github.com/DanielDistor/cargopulse-supply-chain-platform" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>GitHub</a></div>
+          <ul class="pills"><li class="pill">React</li><li class="pill">TypeScript</li><li class="pill">Three.js</li><li class="pill">Node.js</li><li class="pill">LLM agents</li></ul>
         </div>
       </article>
 
@@ -105,18 +103,20 @@
         </div>
       </article>
 
-      <article class="proj" id="floor-planner">
-        <div class="thumb thumb-hack"><span>AI Floor Planner</span></div>
+      <article class="proj" id="cargopulse">
+        <div class="thumb thumb-cargo"><span>CargoPulse</span></div>
         <div class="proj-body">
-          <span class="mini-label">Hackathon · Cornell</span>
-          <h2 class="proj-title">Dell x Nvidia Hackathon</h2>
-          <p class="proj-desc">An AI-powered floor-planning tool that places furniture into real rooms under hard safety-rule constraints and matches each item to a product you can actually buy, built in 12 hours.</p>
+          <span class="mini-label">Data Product · Live</span>
+          <h2 class="proj-title">CargoPulse</h2>
+          <p class="proj-desc">A real-time supply chain risk intelligence platform that pulls live, free data sources into one view of where shipments are likely to get stuck.</p>
           <ul class="proj-points">
-              <li>Owned the user flow and UI design</li>
-              <li>Mapped the full journey: floor-plan upload → AI-generated layout → exportable shopping list</li>
-              <li>Built with an LLM tool-calling agent loop behind a 3D room view</li>
+              <li>Live vessel map near 50 major ports, streamed over WebSocket from AIS data</li>
+              <li>Congestion score (0–100) for the top 30 ports, refreshed every 15 minutes</li>
+              <li>Rule-based delay estimate for any origin → destination route</li>
+              <li>Country-level supplier risk heatmap combining congestion, marine weather, and the Baltic Dry Index</li>
           </ul>
-          <ul class="pills"><li class="pill">React</li><li class="pill">TypeScript</li><li class="pill">Three.js</li><li class="pill">Node.js</li><li class="pill">LLM agents</li></ul>
+          <ul class="pills"><li class="pill">Python</li><li class="pill">Streamlit</li><li class="pill">Plotly</li><li class="pill">pandas</li><li class="pill">SQLite</li><li class="pill">WebSockets</li></ul>
+            <div class="proj-links"><a class="proj-link" href="https://cargopulse-app.streamlit.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>Live app</a><a class="proj-link" href="https://github.com/DanielDistor/cargopulse-supply-chain-platform" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>GitHub</a></div>
         </div>
       </article>
 
