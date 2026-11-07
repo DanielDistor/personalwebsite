@@ -1,18 +1,3 @@
-// Highlight the dock item for the section currently in view
-const links = document.querySelectorAll(".dock a");
-const sections = [...links].map((a) => document.getElementById(a.dataset.section));
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      links.forEach((a) => a.classList.toggle("active", a.dataset.section === entry.target.id));
-    });
-  },
-  { rootMargin: "-45% 0px -50% 0px" }
-);
-sections.forEach((s) => s && observer.observe(s));
-
 // Projects page: Digital / Physical tabs (#physical in the URL opens that tab)
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 
