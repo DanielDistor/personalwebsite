@@ -285,8 +285,8 @@ a { color: inherit; text-decoration: none; }
 .thumb.thumb-shot { display: block; background: #0a0a0a; }
 .thumb.thumb-shot img { width: 100%; height: 100%; object-fit: cover; object-position: left top; border-radius: 0; box-shadow: none; }
 /* Two full phone screenshots side by side */
-.thumb.thumb-phone { aspect-ratio: 1.1; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 6%; padding: 0; }
-.thumb.thumb-phone img { width: 36%; height: auto; border: 4px solid #111820; border-radius: 16px; box-shadow: 0 16px 34px rgba(16, 50, 74, 0.28); }
+.thumb.thumb-phone { aspect-ratio: 1.3; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 6%; padding: 0; }
+.thumb.thumb-phone img { width: 31%; height: auto; border: 4px solid #111820; border-radius: 16px; box-shadow: 0 16px 34px rgba(16, 50, 74, 0.28); }
 .thumb-split { background-image: radial-gradient(circle at 50% 0%, #ffffff 0%, transparent 60%), linear-gradient(160deg, #e3edf4 0%, #cddde9 100%); }
 
 .thumb-cargo {  /* ocean route grid */
@@ -490,7 +490,7 @@ a { color: inherit; text-decoration: none; }
 
 .proj {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   gap: 28px;
   align-items: start;
   padding: 16px 24px 20px 16px;
