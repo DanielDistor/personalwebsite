@@ -281,6 +281,9 @@ a { color: inherit; text-decoration: none; }
 .thumb span { font-size: 24px; }
 .thumb:has(img) { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
 .thumb img { width: 64px; height: 64px; border-radius: 16px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); }
+/* Real screenshot filling the whole thumbnail */
+.thumb.thumb-shot { display: block; background: #0a0a0a; }
+.thumb.thumb-shot img { width: 100%; height: 100%; object-fit: cover; object-position: left top; border-radius: 0; box-shadow: none; }
 
 .thumb-cargo {  /* ocean route grid */
   background-image:

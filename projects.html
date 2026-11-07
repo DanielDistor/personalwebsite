@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=29">
+  <link rel="stylesheet" href="styles.css?v=30">
 </head>
 <body>
   <main class="frame">
@@ -56,19 +56,19 @@
       </article>
 
       <article class="proj" id="deposit-pricing">
-        <div class="thumb thumb-bank"><span>Deposit Pricing</span></div>
+        <div class="thumb thumb-shot"><img src="assets/deposit-dashboard.jpg" alt="Where to Put Your Money dashboard: Peak Bank ranked #1 at 4.27% APY, with runner-ups, a growth chart versus Chase, and rate history versus Fed funds" width="1280" height="900" loading="lazy"></div>
         <div class="proj-body">
           <span class="mini-label">Analytics · Live</span>
-          <h2 class="proj-title">Deposit Pricing Analytics</h2>
-          <p class="proj-desc">Where should a client deposit their money right now to get the most growth? This pipeline tracks how major U.S. banks respond to Federal Reserve rate changes and builds the case.</p>
+          <h2 class="proj-title">Where to Put Your Money</h2>
+          <p class="proj-desc">Chase pays 0.01% on savings while the best online banks pay over 4%. Tell it how much you have, what you add each month, and when you need it back, and it shows the savings account, CD, or Treasury that pays you the most, using rates refreshed every day.</p>
           <ul class="proj-points">
-              <li>Pulls Fed funds and Treasury rates from the FRED API and bank APYs scraped from Bankrate</li>
-              <li>Loads raw data into Snowflake and models it with dbt into a fact table with bank, product, and date dimensions</li>
-              <li>Refreshes automatically every week with GitHub Actions</li>
-              <li>Presents the answer in a public Streamlit dashboard</li>
+              <li>Ranks every savings account, CD, and Treasury for your amount and timeline, with Chase, BofA, Wells Fargo, and Citi shown for comparison</li>
+              <li>Pulls Fed rates from the FRED API and bank rates from Bankrate, then models them with dbt in DuckDB</li>
+              <li>Checks its own data before publishing and flags one-week rate spikes as bad data instead of recommending them</li>
+              <li>Refreshes and redeploys itself every day with GitHub Actions</li>
           </ul>
-          <ul class="pills"><li class="pill">SQL</li><li class="pill">Python</li><li class="pill">Snowflake</li><li class="pill">dbt</li><li class="pill">GitHub Actions</li><li class="pill">Streamlit</li></ul>
-            <div class="proj-links"><a class="proj-link" href="https://deposit-pricing-analytics-banking.streamlit.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>Live dashboard</a><a class="proj-link" href="https://github.com/DanielDistor/deposit-pricing-analytics-banking" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>GitHub</a></div>
+          <ul class="pills"><li class="pill">Python</li><li class="pill">SQL</li><li class="pill">dbt</li><li class="pill">DuckDB</li><li class="pill">JavaScript</li><li class="pill">GitHub Actions</li></ul>
+            <div class="proj-links"><a class="proj-link" href="https://danieldistor.github.io/deposit-pricing-analytics-banking/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>Live site</a><a class="proj-link" href="https://github.com/DanielDistor/deposit-pricing-analytics-banking" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>GitHub</a></div>
         </div>
       </article>
 
