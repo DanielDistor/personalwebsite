@@ -284,6 +284,10 @@ a { color: inherit; text-decoration: none; }
 /* Real screenshot filling the whole thumbnail */
 .thumb.thumb-shot { display: block; background: #0a0a0a; }
 .thumb.thumb-shot img { width: 100%; height: 100%; object-fit: cover; object-position: left top; border-radius: 0; box-shadow: none; }
+/* Phone screenshot peeking up from the bottom of the thumbnail */
+.thumb.thumb-phone { display: flex; justify-content: center; align-items: flex-start; padding-top: 7%; }
+.thumb.thumb-phone img { width: 42%; height: auto; border-radius: 18px; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35); }
+.thumb-split { background-image: radial-gradient(circle at 75% 20%, #5aa6cf 0%, transparent 45%), linear-gradient(160deg, #225e82 0%, #1a4a68 55%, #10324a 100%); }
 
 .thumb-cargo {  /* ocean route grid */
   background-image:
