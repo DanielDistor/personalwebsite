@@ -301,6 +301,7 @@ a { color: inherit; text-decoration: none; }
 /* Two full phone screenshots side by side */
 .thumb.thumb-phone { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 6%; padding: 0; }
 .thumb.thumb-phone img { width: 31%; height: auto; border: 4px solid #111820; border-radius: 16px; box-shadow: 0 16px 34px rgba(16, 50, 74, 0.28); }
+.thumb-eduphones { background-image: radial-gradient(circle at 50% 0%, #ffffff 0%, transparent 60%), linear-gradient(160deg, #e6e9fb 0%, #cdd4f5 100%); }
 .thumb-split { background-image: radial-gradient(circle at 50% 0%, #ffffff 0%, transparent 60%), linear-gradient(160deg, #e3edf4 0%, #cddde9 100%); }
 
 .thumb-cargo {  /* ocean route grid */
